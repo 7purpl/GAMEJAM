@@ -7,11 +7,12 @@ TagManager:
   - CinemachineTarget
   - Climbable
   - climbableTag
+  - Pickable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Pickable
   - Water
   - UI
   - climbableLayer

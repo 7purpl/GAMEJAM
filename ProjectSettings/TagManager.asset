@@ -5,17 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - deplacable
   - Climbable
-  - Pickable
+  - climbableTag
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Pickable
+  - 
   - Water
   - UI
-  - 
+  - climbableLayer
   - 
   - 
   - 

@@ -6,6 +6,7 @@ public class MangerCroissant : MonoBehaviour
 {
     private ScoreManager scoreManager;
     public Timer gameTimer; // Référence au script Timer
+    public GameManager gameManager; // Référence au script GameManager
 
     private void Start()
     {
@@ -24,7 +25,12 @@ public class MangerCroissant : MonoBehaviour
 
             if (gameTimer != null)
             {
-                gameTimer.AddTime(5.0f); // Ajoute 5 secondes au timer
+                gameTimer.AddTime(15.0f); // Ajoute 15 secondes au timer
+            }
+
+            if (gameManager != null)
+            {
+                gameManager.CheckCroissants(); // Appelle la méthode CheckCroissants du GameManager
             }
         }
     }

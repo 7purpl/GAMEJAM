@@ -7,6 +7,7 @@ public class MangerCroissant : MonoBehaviour
     private ScoreManager scoreManager;
     public Timer gameTimer; // Référence au script Timer
     public GameManager gameManager; // Référence au script GameManager
+    public AudioSource eatSound; // Référence à l'AudioSource pour l'effet sonore
 
     private void Start()
     {
@@ -18,6 +19,13 @@ public class MangerCroissant : MonoBehaviour
         if (other.gameObject.CompareTag("Croissant"))
         {
             Destroy(other.gameObject); // Détruit le croissant
+
+            // Jouer le son de manger un croissant
+            if (eatSound != null)
+            {
+                eatSound.Play();
+            }
+
             if (scoreManager != null)
             {
                 scoreManager.AddPoint(); // Ajoute un point au score
@@ -25,7 +33,7 @@ public class MangerCroissant : MonoBehaviour
 
             if (gameTimer != null)
             {
-                gameTimer.AddTime(15.0f); // Ajoute 15 secondes au timer
+                gameTimer.AddTime(30.0f); // Ajoute 30 secondes au timer
             }
 
             if (gameManager != null)
